@@ -33,7 +33,7 @@ function AddNumbers() {
 
   return (
     <div className="container">
-      <H1>Yursa Math App</H1>
+      <h1>Yursa Math App</h1>
       <p className="question">
         {num1} + {num2} ={" "}
       </p>
