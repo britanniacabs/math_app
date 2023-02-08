@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import AddNumbers from "./AddNumbers";
 
 const Login = () => {
+  const usernameRef = useRef(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  useEffect(() => {
+    usernameRef.current.focus();
+  }, []);
   const handleSubmit = (event) => {
     event.preventDefault();
     if (username === "admin" && password === "123") {
@@ -21,7 +25,7 @@ const Login = () => {
   return (
     <div>
       {!isLoggedIn ? (
-        <div className="w-full max-w-sm mx-auto mt-10">
+        <div className="w-full max-w-sm mx-auto mt-10 bg-neutral-100">
           <form onSubmit={handleSubmit}>
             <div className="mb-5">
               <label
@@ -31,6 +35,7 @@ const Login = () => {
                 username:
               </label>
               <input
+                ref={usernameRef}
                 type="text"
                 id="username"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

@@ -1,5 +1,5 @@
 // AddNumbers.js
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./AddNumbers.css";
 
 function AddNumbers() {
@@ -9,6 +9,11 @@ function AddNumbers() {
   const [correct, setCorrect] = useState(0);
   const [incorrect, setIncorrect] = useState(0);
   const [isCorrect, setIsCorrect] = useState(null);
+  const answerRef = useRef(null);
+
+  useEffect(() => {
+    answerRef.current.focus();
+  }, []);
 
   const handleAnswerChange = (event) => {
     setAnswer(event.target.value);
@@ -37,6 +42,7 @@ function AddNumbers() {
         {num1} + {num2} ={" "}
       </p>
       <input
+        ref={answerRef}
         className="answer-input"
         type="text"
         value={answer}
