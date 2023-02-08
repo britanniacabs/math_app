@@ -28,8 +28,8 @@ function AddNumbers() {
         setNum1(Math.floor(Math.random() * 100));
         setNum2(Math.floor(Math.random() * 100));
         setAnswer("");
-        answerRef.current.focus();
         setIsCorrect(true);
+        answerRef.current.focus();
       } else {
         setIncorrect(incorrect + 1);
         setIsCorrect(false);
@@ -46,13 +46,13 @@ function AddNumbers() {
       <input
         ref={answerRef}
         className="answer-input"
-        type="text"
+        type="number"
         value={answer}
         onChange={handleAnswerChange}
         onKeyPress={checkAnswer}
       />
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded"
         onClick={checkAnswer}
       >
         Check Answer

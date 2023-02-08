@@ -10,8 +10,8 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      gray: colors.coolGray,
-      blue: colors.lightBlue,
+      gray: colors.gray,
+      blue: colors.blue,
       red: colors.rose,
       pink: colors.fuchsia,
     },
