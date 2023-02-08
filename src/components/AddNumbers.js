@@ -38,7 +38,7 @@ function AddNumbers() {
 
   return (
     <div className="container mx-auto bg-gray-200 rounded-xl flex space-y-4 shadow border p-8 m-10">
-      <p className="question">
+      <p className="font-semibold text-slate-900">
         {num1} + {num2} ={" "}
       </p>
       <input
@@ -57,8 +57,12 @@ function AddNumbers() {
       </button>
       {isCorrect === false && <p className="incorrect">Incorrect</p>}
       {isCorrect === true && <p className="correct">Correct</p>}
-      <p>Correct answers: {correct}</p>
-      <p>Incorrect answers: {incorrect}</p>
+      <p className="text-green-600/100 font-semibold">
+        Correct answers: {correct}
+      </p>
+      <p className="text-red-600/100 font-semibold">
+        Incorrect answers: {incorrect}
+      </p>
     </div>
   );
 }
