@@ -1,5 +1,6 @@
 // withAuth.js
 import React, { useState } from "react";
+import Login from "./Login";
 
 const withAuth = (WrappedComponent) => {
   return (props) => {
@@ -18,7 +19,7 @@ const withAuth = (WrappedComponent) => {
           <WrappedComponent {...props} />
         ) : (
           <div class="login">
-            <p class="question">Please login to see more..</p>
+            <Login />
             <button onClick={login} class="check-button">
               Login
             </button>

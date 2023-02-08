@@ -32,8 +32,7 @@ function AddNumbers() {
   };
 
   return (
-    <div className="container">
-      <h1>Yursa Math App</h1>
+    <div className="container mx-auto bg-gray-200 rounded-xl flex space-y-4 shadow border p-8 m-10">
       <p className="question">
         {num1} + {num2} ={" "}
       </p>
@@ -44,7 +43,10 @@ function AddNumbers() {
         onChange={handleAnswerChange}
         onKeyPress={checkAnswer}
       />
-      <button className="check-button" onClick={checkAnswer}>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={checkAnswer}
+      >
         Check Answer
       </button>
       {isCorrect === false && <p className="incorrect">Incorrect</p>}
