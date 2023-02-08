@@ -28,6 +28,7 @@ function AddNumbers() {
         setNum1(Math.floor(Math.random() * 100));
         setNum2(Math.floor(Math.random() * 100));
         setAnswer("");
+        answerRef.current.focus();
         setIsCorrect(true);
       } else {
         setIncorrect(incorrect + 1);
