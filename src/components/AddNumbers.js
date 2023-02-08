@@ -32,13 +32,14 @@ function AddNumbers() {
       } else {
         setIncorrect(incorrect + 1);
         setIsCorrect(false);
+        answerRef.current.focus();
       }
     }
   };
 
   return (
     <div className="container mx-auto bg-gray-200 rounded-xl flex space-y-4 shadow border p-8 m-10">
-      <p className="font-semibold text-slate-900">
+      <p className="font-semibold text-4xl">
         {num1} + {num2} ={" "}
       </p>
       <input

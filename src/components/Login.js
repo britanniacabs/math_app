@@ -19,6 +19,7 @@ const Login = () => {
     } else {
       setErrorMessage("Incorrect username or password");
       setIsLoggedIn(false);
+      usernameRef.current.focus();
     }
   };
 
