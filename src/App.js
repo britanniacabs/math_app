@@ -10,7 +10,7 @@ import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex-col justify-center items-center">
       <Navbar />
       {
         //   <Register />

@@ -39,7 +39,7 @@ function AddNumbers() {
   };
 
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl flex space-y-4 shadow border p-8 m-10">
+    <div className="mx-auto w-96 bg-gray-100 rounded-xl flex flex-col justify-center items-center space-y-4 shadow border p-8 m-10">
       <p className="font-semibold text-4xl">
         {num1} + {num2} ={" "}
       </p>
@@ -52,17 +52,17 @@ function AddNumbers() {
         onKeyPress={checkAnswer}
       />
       <button
-        className="bg-blue-500 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={checkAnswer}
       >
         Check Answer
       </button>
       {isCorrect === false && <p className="incorrect">Incorrect</p>}
       {isCorrect === true && <p className="correct">Correct</p>}
-      <p className="text-green-600/100 font-semibold">
+      <p className="text-green-700 text-xl font-semibold">
         Correct answers: {correct}
       </p>
-      <p className="text-red-600/100 font-semibold">
+      <p className="text-red-700 text-xl font-semibold">
         Incorrect answers: {incorrect}
       </p>
     </div>
