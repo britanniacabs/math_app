@@ -10,12 +10,14 @@ import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="flex-col justify-center items-center">
-      <Navbar />
-      {
-        //   <Register />
-      }
-      <Login />
+    <div className="flex-col">
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Login />
+      </div>
+
       {
         // <AuthenticatedAddNumbers />
       }

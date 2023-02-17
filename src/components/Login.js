@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-400 ">
+    <div className="flex justify-center items-center h-80 bg-gray-300 ">
       {!isLoggedIn ? (
         <div>
           <div className="w-96 p-6 shadow-lg bg-white rounded-md">
